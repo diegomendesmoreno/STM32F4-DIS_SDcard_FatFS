@@ -1,8 +1,7 @@
 /**
   ******************************************************************************
-  * File Name          : SDIO.h
-  * Description        : This file provides code for the configuration
-  *                      of the SDIO instances.
+  * File Name          : main.h
+  * Description        : This file contains the common defines of the application
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -47,45 +46,43 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __sdio_H
-#define __sdio_H
-#ifdef __cplusplus
- extern "C" {
-#endif
-
-/* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal.h"
-#include "main.h"
+#ifndef __MAIN_H
+#define __MAIN_H
+  /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-extern SD_HandleTypeDef hsd;
+/* Private define ------------------------------------------------------------*/
+
+#define USER_BUTTON_Pin GPIO_PIN_0
+#define USER_BUTTON_GPIO_Port GPIOA
+#define USER_BUTTON_EXTI_IRQn EXTI0_IRQn
+#define LED4_LEFT_GREEN_Pin GPIO_PIN_12
+#define LED4_LEFT_GREEN_GPIO_Port GPIOD
+#define LED3_UP_ORANGE_Pin GPIO_PIN_13
+#define LED3_UP_ORANGE_GPIO_Port GPIOD
+#define LED5_RIGHT_RED_Pin GPIO_PIN_14
+#define LED5_RIGHT_RED_GPIO_Port GPIOD
+#define LED6_DOWN_BLUE_Pin GPIO_PIN_15
+#define LED6_DOWN_BLUE_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-extern void _Error_Handler(char *, int);
+void _Error_Handler(char *, int);
 
-void MX_SDIO_SD_Init(void);
-
-/* USER CODE BEGIN Prototypes */
-
-/* USER CODE END Prototypes */
-
-#ifdef __cplusplus
-}
-#endif
-#endif /*__ sdio_H */
+#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
 
 /**
   * @}
-  */
+  */ 
 
 /**
   * @}
-  */
+*/ 
 
+#endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

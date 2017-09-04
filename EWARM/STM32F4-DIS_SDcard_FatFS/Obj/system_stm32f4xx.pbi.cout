@@ -1,4 +1,4 @@
-"C:\Users\engenharia\Documents\Diego Moreno\Projetos\STM32F4\Testes_STM32F4DISCOVERY\STM32F4-DIS_SDcard_FatFS\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c"
+"C:\Users\engenharia\Documents\Diego Moreno\Projetos\STM32F4\Testes_STM32F4DISCOVERY\STM32F4-DIS_SDcard_FatFS\Src\system_stm32f4xx.c"
 -std=c99
 -ferror-limit=100
 -I
